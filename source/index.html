@@ -3,15 +3,171 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>CAT ENERGY</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка</header>
-  <p>Адаптивная вёрстка сайта.</p>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <a class="header__logo logo" href="/" aria-current="page">
+        <img class="logo__icon" width="33" height="38" src="images/" alt="Логотип магазина для котов" id="logo-icon">
+        <img class="logo__title" width="101" height="18" src="images/" alt="Cat Energy" id="logo-title" aria-describedby="logo-icon">
+      </a>
+
+      <!-- navigation -->
+      <nav class="header__navigation navigation">
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="navigation__list navigation__list--close">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="/" aria-current="page">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="programs.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title title">Функциональное питание для котов</h1>
+        <p class="hero__subtitle">Занялся собой? Займись котом!</p>
+        <img class="hero__image" width="280" height="270" src="images/" alt="Оранжевая упаковка корма для кошек CAT ENERGY PRO с изображением котика в костюме супер-героя на крышке">
+        <a class="hero__button button button--primary" href="/programs">Подобрать программу</a>
+      </div>
+    </section>
+
+    <!-- programs -->
+    <section class="programs container">
+      <h2 class="visually-hidden">Программы здорового питания для котов</h2>
+      <article class="program">
+        <h3 class="program__title program__title--icon-lazy-cat">Похудение</h3>
+        <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+        <a class="program__link" href="/catalog/slim">Каталог Slim</a>
+      </article>
+      <article class="program">
+        <h3 class="program__title program__title--icon-active-cat">Набор массы</h3>
+        <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+        <a class="program__link" href="/catalog/pro">Каталог Pro</a>
+      </article>
+    </section>
+
+    <!-- how it works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="how-it-works__title title">Как это работает</h2>
+        <ul class="how-it-works__list">
+          <li class="how-it-works__item how-it-works__item--healthy">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="how-it-works__item how-it-works__item--cook">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="how-it-works__item how-it-works__item--portions">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="how-it-works__item how-it-works__item--results">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- live example -->
+    <section class="live-example">
+      <div class="container">
+        <h2 class="live-example__title title">Живой пример</h2>
+        <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <dl class="live-example__list">
+          <div class="live-example__item live-example__item--value">
+            <dt class="live-example__term">5 кг.</dt>
+            <dd class="live-example__definition">снижение веса</dd>
+          </div>
+          <div class="live-example__item live-example__item--value">
+            <dt class="live-example__term">60 дней</dt>
+            <dd class="live-example__definition">затрачено времени</dd>
+          </div>
+          <div class="live-example__item live-example__item--price">
+            <dt class="live-example__term">Затраты на питание:</dt>
+            <dd class="live-example__definition">15 000 руб.</dd>
+          </div>
+        </dl>
+        <!-- before and after slider -->
+        <div class="live-example__before-after before-after">
+          <span class="visually-hidden">Интерактивный пример с фотографиями</span>
+          <img class="before-after__image-before" width="280" height="256" src="images/" alt="Результат до">
+          <div class="before-after__wrapper">
+            <img class="before-after__image-after" width="280" height="256" src="images/" alt="Результат после">
+          </div>
+          <div class="before-after__slider-wrapper">
+            <button class="before-after__handle" type="button">
+              <span class="visually-hidden">Перемещать ползунок влево или вправо</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <!-- contacts -->
+    <section class="contacts">
+      <div class="contacts__container container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+
+      <!-- map -->
+      <div class="map">
+        <span class="visually-hidden">Наше местоположение на карте</span>
+        <iframe class="map_frame" width="1440" height="400" allowfullscreen loading="lazy"></iframe>
+        <img class="map__image" width="320" height="362" src="images/" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <div class="footer__secondary">
+      <div class="container">
+        <a class="footer__logo logo" href="#" aria-current="page">
+          <img class="logo__title" width="128" height="24" src="images/" alt="Логотип магазина для котов Cat Energy">
+        </a>
+
+        <!-- social media -->
+        <section>
+          <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+          <ul class="footer__list social">
+            <li>
+              <a class="social__icon social__icon--vk" href="https://vk.com/htmlacademy" title="Перейти в Вконтакте" target="_blank" rel="noreferrer noopener">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li>
+              <a class="social__icon social__icon--youtube" href="https://www.youtube.com/user/htmlacademyru" title="Перейти на YouTube" target="_blank" rel="noreferrer noopener">
+                <span class="visually-hidden">YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a class="social__icon social__icon--telegram" href="https://t.me/htmlacademy" title="Перейти в Телеграм" target="_blank" rel="noreferrer noopener">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- developer logo -->
+        <a class="developer-logo" href="https://htmlacademy.ru/" title="Перейти на сайт HTML Academy" target="_blank" rel="noreferrer noopener">
+          <span class="developer-logo__title" id="developer-logo-title">HTML Academy</span>
+          <img class="developer-logo__icon" src="images/logo-htmlacademy.svg" width="27" height="34" alt="Посетить сайт разработчика" aria-labelledby="developer-logo-title">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/index.js" defer></script>
 </body>
 
 </html>
