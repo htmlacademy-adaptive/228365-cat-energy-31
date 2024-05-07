@@ -1,0 +1,47 @@
+@mixin button($font-size, $line-height, $text-color, $bg-color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+.button {
+  @include flex-center;
+  padding: 10px 26px;
+  font-family: var(--font-title,);
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &--primary {
+    @include button(16px, 20px, var(--color-light), var(--color-accent));
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: var(--color-accent-dark, inherit);
+    }
+
+    &:active {
+      color: rgba(var(--color-light-rgb,), 0.3);
+    }
+  }
+
+  &--secondary {
+    @include button(16px, 20px, var(--color-dark), var(--color-secondary));
+
+    &:hover,
+    &:active {
+      background-color: var(--color-secondary-light, inherit);
+    }
+  }
+}

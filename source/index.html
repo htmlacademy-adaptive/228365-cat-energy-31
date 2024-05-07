@@ -10,13 +10,15 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
 </head>
 
 <body class="page__body">
   <!-- header -->
   <header class="header">
-    <div class="container">
-      <a class="header__logo logo" href="/" aria-current="page">
+    <div class="header__container container">
+      <a class="header__logo logo" href="index.html" aria-current="page">
         <picture>
           <source width="70" height="59" media="(min-width: 1200px)" srcset="images/logo/logo__icon_large.svg" type="image/svg+xml">
           <source width="60" height="50" media="(min-width: 768px)" srcset="images/logo/logo__icon_medium.svg" type="image/svg+xml">
@@ -27,12 +29,12 @@
 
       <!-- navigation -->
       <nav class="header__navigation navigation">
-        <button class="navigation__toggle" type="button">
+        <button class="navigation__toggle button toggle-icon" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="navigation__list navigation__list--close">
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--current" href="/" aria-current="page">Главная</a>
+            <a class="navigation__link navigation__link--current" href="#" aria-current="page">Главная</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="catalog.html">Каталог продукции</a>
@@ -45,16 +47,16 @@
     </div>
   </header>
 
-  <main>
+  <main class="content">
     <!-- hero -->
     <section class="hero">
-      <div class="container">
+      <div class="hero__container container">
         <h1 class="hero__title title">Функциональное питание для котов</h1>
-        <p class="hero__subtitle">Занялся собой? Займись котом!</p>
+        <p class="hero__subtitle title">Занялся собой? Займись котом!</p>
         <picture>
           <source width="552" height="499" media="(min-width: 1280px)" srcset="images/hero/hero__image_large@1x.png 1x, images/hero/hero__image_large@2x.png 2x" type="image/png">
           <source width="708" height="608" media="(min-width: 768px)" srcset="images/hero/hero__image_medium@1x.png 1x, images/hero/hero__image_medium@2x.png 2x" type="image/png">
-          <img class="hero__image" width="280" height="270" src="images/hero/hero__image_small@1x.png" srcset="images/hero/hero__image_small@2x.png 2x" alt="Оранжевая упаковка корма для кошек CAT ENERGY PRO с изображением котика в костюме супер-героя на крышке">
+          <img class="hero__image" width="280" height="270" src="images/hero/hero__image_small@1x.png" srcset="images/hero/hero__image_small@2x.png 2x" alt="Оранжевая упаковка корма для кошек CAT ENERGY PRO с изображением котика в костюме супер-героя на крышке" loading="lazy">
         </picture>
         <a class="hero__button button button--primary" href="/programs">Подобрать программу</a>
       </div>
@@ -64,12 +66,12 @@
     <section class="programs container">
       <h2 class="visually-hidden">Программы здорового питания для котов</h2>
       <article class="program">
-        <h3 class="program__title program__title--icon-lazy-cat">Похудение</h3>
-        <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+        <h3 class="program__title title program__title--icon-lazy-cat">Похудение</h3>
+        <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="program__link" href="/catalog/slim">Каталог Slim</a>
       </article>
       <article class="program">
-        <h3 class="program__title program__title--icon-active-cat">Набор массы</h3>
+        <h3 class="program__title title program__title--icon-active-cat">Набор массы</h3>
         <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
         <a class="program__link" href="/catalog/pro">Каталог Pro</a>
       </article>
@@ -95,32 +97,31 @@
         <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <dl class="live-example__list">
           <div class="live-example__item live-example__item--value">
-            <dt class="live-example__term">5 кг.</dt>
+            <dt class="live-example__term title">5 кг.</dt>
             <dd class="live-example__definition">снижение веса</dd>
           </div>
           <div class="live-example__item live-example__item--value">
-            <dt class="live-example__term">60 дней</dt>
+            <dt class="live-example__term title">60 дней</dt>
             <dd class="live-example__definition">затрачено времени</dd>
           </div>
-          <div class="live-example__item live-example__item--price">
+          <div class="live-example__item live-example__item--price title">
             <dt class="live-example__term">Затраты на питание:</dt>
-            <dd class="live-example__definition">15 000 руб.</dd>
+            <dd class="live-example__term">15 000 руб.</dd>
           </div>
         </dl>
+
         <!-- before and after slider -->
         <div class="live-example__before-after before-after">
           <span class="visually-hidden">Интерактивный пример с фотографиями</span>
           <picture>
             <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__fat-cat_large@1x.png 1x, images/before-after/before-after__fat-cat_large@2x.png 2x" type="image/png">
-            <img class="before-after__image-before" width="280" height="256" src="images/before-after/before-after__fat-cat_small@1x.png" srcset="images/before-after/before-after__fat-cat_small@2x.png 2x" alt="Результат до, ленивый толстый кот">
+            <img class="before-after__image before-after__image--before" width="280" height="256" src="images/before-after/before-after__fat-cat_small@1x.png" srcset="images/before-after/before-after__fat-cat_small@2x.png 2x" alt="Результат до, ленивый толстый кот" loading="lazy">
           </picture>
-          <div class="before-after__wrapper">
-            <picture>
-              <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__slim-cat_large@1x.png 1x, images/before-after/before-after__slim-cat_large@2x.png 2x" type="image/png">
-              <img class="before-after__image-after" width="280" height="256" src="images/before-after/before-after__slim-cat_small@1x.png" srcset="images/before-after/before-after__slim-cat_small@2x.png 2x" alt="Результат после, активный здоровый кот">
-            </picture>
-          </div>
-          <div class="before-after__slider-wrapper">
+          <picture>
+            <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__slim-cat_large@1x.png 1x, images/before-after/before-after__slim-cat_large@2x.png 2x" type="image/png">
+            <img class="before-after__image before-after__image--after" width="280" height="256" src="images/before-after/before-after__slim-cat_small@1x.png" srcset="images/before-after/before-after__slim-cat_small@2x.png 2x" alt="Результат после, активный здоровый кот" loading="lazy">
+          </picture>
+          <div class="before-after__handle-wrapper">
             <button class="before-after__handle" type="button">
               <span class="visually-hidden">Перемещать ползунок влево или вправо</span>
             </button>
@@ -136,32 +137,35 @@
     <section class="contacts">
       <div class="contacts__container container">
         <h2 class="visually-hidden">Контакты</h2>
-        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <h3 class="contacts__title title">Приглашаем к сотрудничеству дилеров!</h3>
+        <address class="contacts__address">
+          <span>ул. Большая Конюшенная, д. 19/8</span>
+          <span>Санкт-Петербург</span>
+        </address>
       </div>
 
       <!-- map -->
       <div class="map">
         <span class="visually-hidden">Наше местоположение на карте</span>
         <iframe class="map__frame" width="1440" height="400" allowfullscreen loading="lazy" title="Карта с нашим местоположением"></iframe>
-        <div class="map__fallback visually-hidden">
+        <div class="map__fallback">
           <picture>
             <source width="1440" height="400" media="(min-width: 1280px)" srcset="images/map/map__image_large@1x.jpg 1x, images/map/map__image_large@2x.jpg 2x" type="image/jpeg">
             <source width="768" height="400" media="(min-width: 768px)" srcset="images/map/map__image_medium@1x.jpg 1x, images/map/map__image_medium@2x.jpg 2x" type="image/jpeg">
-            <img class="map__image" width="320" height="362" src="images/map/map__image_small@1x.jpg" srcset="images/map/map__image_small@2x.jpg 2x" alt="Карта с нашим местоположением">
+            <img class="map__image" width="320" height="362" src="images/map/map__image_small@1x.jpg" srcset="images/map/map__image_small@2x.jpg 2x" alt="Карта с нашим местоположением" loading="lazy">
           </picture>
         </div>
       </div>
     </section>
 
-    <div class="footer__secondary">
-      <div class="container">
+    <div class="footer__links">
+      <div class="footer__container container">
         <a class="footer__logo logo" href="#" aria-current="page">
-          <img class="logo__title" width="128" height="24" src="images/logo/logo__title_medium.svg" alt="Логотип магазина для котов Cat Energy">
+          <img class="logo__title" width="128" height="24" src="images/logo/logo__title_medium.svg" alt="Логотип магазина для котов Cat Energy" loading="lazy">
         </a>
 
         <!-- social media -->
-        <section>
+        <section class="footer__social">
           <h2 class="visually-hidden">Ссылки на социальные сети</h2>
           <ul class="footer__list social">
             <li>
@@ -183,21 +187,16 @@
         </section>
 
         <!-- developer logo -->
-        <a class="developer-logo" href="https://htmlacademy.ru/" title="Перейти на сайт HTML Academy" target="_blank" rel="noreferrer noopener">
+        <a class="footer__developer-logo developer-logo" href="https://htmlacademy.ru/" title="Перейти на сайт HTML Academy" target="_blank" rel="noreferrer noopener">
           <span class="visually-hidden">Посетить сайт разработчика</span>
-          <span class="developer-logo__title" id="developer-logo-title">HTML Academy</span>
-          <svg class="developer-logo__icon" width="27" height="34" role="img" viewBox="0 0 27 34" aria-labelledby="developer-logo-title" aria-describedby="developer-logo-description" xmlns="http://www.w3.org/2000/svg">
-            <title id="developer-logo-description">Стилизованный из линий шестиугольный логотип с акдемической шапкой в центре</title>
-            <g fill="currentColor">
-              <path d="M13.6 0h-.1L0 1.4V26l13.5 8L27 26V1.4L13.6 0Zm11.6 25-11.7 7-11.7-7V15l11.7 6.8v1.3l-8-4.8v1.3l8 4.8v1.3l-8-4.8v1.2l8 4.8 8.1-4.8V17l3.6-2.1V25Zm0-11.6-3.2 2-1.5.8-7-4.2v1.2l6 3.6-.2.1-.8.5-5-3v1.3l3.9 2.3-1 .6-3-1.7v1.2l2 1.2-2 1.2-11.6-7 11.6-6.9 11.8 6.9Zm0-1.2L13.4 5.3l-11.6 7V3l11.7-1.2L25.2 3v9.2Z" />
-            </g>
-          </svg>
+          <span class="developer-logo__title">HTML Academy</span>
         </a>
       </div>
     </div>
   </footer>
 
   <script src="scripts/index.js" defer></script>
+  <script src="scripts/before-after.js" defer></script>
 </body>
 
 </html>

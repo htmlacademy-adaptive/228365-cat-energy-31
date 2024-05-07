@@ -1,0 +1,29 @@
+.contacts {
+  //
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-columns: 1fr minmax(50%, 1fr);
+  gap: 20px;
+  padding-block: 26px;
+  background-color: var(--color-light, inherit);
+
+  &--change-bg {
+    background-color: var(--color-secondary, inherit);
+  }
+}
+
+.contacts__title {
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: var(--color-dark-100, inherit);
+}
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.42;
+  font-style: normal;
+}

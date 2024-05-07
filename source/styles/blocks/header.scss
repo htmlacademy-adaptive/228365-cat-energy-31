@@ -1,5 +1,23 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  padding-block: 13px;
+  background-color: var(--color-light, inherit);
+
+  &--inner {
+    box-shadow: 0 1px 0 0 var(--color-secondary-semidark, inherit);
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.header__logo {
+  //
+}
+
+.header__navigation {
+  //
 }

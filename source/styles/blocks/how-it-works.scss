@@ -1,0 +1,53 @@
+.how-it-works {
+  padding-block: 10px 49px;
+}
+
+.how-it-works__title {
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 1.1;
+  color: var(--color-dark, inherit);
+}
+
+.how-it-works__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.how-it-works__item {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background-color: var(--color-accent, inherit);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--healthy::before {
+    background-image: url("../../icons/icon-leaf.svg");
+    background-size: 25px auto;
+  }
+
+  &--cook::before {
+    background-image: url("../../icons/icon-cook.svg");
+    background-size: 26px auto;
+  }
+
+  &--portions::before {
+    background-image: url("../../icons/icon-eat.svg");
+    background-size: 25px auto;
+  }
+
+  &--results::before {
+    background-image: url("../../icons/icon-results.svg");
+    background-size: 26px auto;
+  }
+}

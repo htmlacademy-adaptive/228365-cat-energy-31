@@ -1,0 +1,21 @@
+.products {
+  padding-block: 27px 15px;
+}
+
+.products__container {
+  //
+}
+
+.products__title {
+  font-size: 36px;
+  margin-bottom: 41px;
+}
+
+.products__list {
+  display: grid;
+  margin-inline: -20px;
+}
+
+.products__item {
+  padding-inline: 20px;
+}

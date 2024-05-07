@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  column-gap: 13px;
+  transition: opacity 0.3s;
+  flex-grow: 1;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__icon {
+  //
+}
+
+.logo__title {
+  margin: auto;
+}

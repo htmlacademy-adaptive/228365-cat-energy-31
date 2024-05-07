@@ -1,0 +1,111 @@
+.before-after {
+  margin: auto;
+  position: relative;
+  width: 280px;
+  height: 256px;
+}
+
+.before-after__image {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  &--before {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+
+  &--after {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+}
+
+.before-after__handle-wrapper {
+  position: absolute;
+  margin-right: -2px;
+  margin-left: -2px;
+  width: calc(100% + 4px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.before-after__handle {
+  position: absolute;
+  padding: 0;
+  background-color: var(--color-dark-600, #666666);
+  width: 4px;
+  height: 100%;
+  left: calc(50% - 2px);
+  transform: translateX(calc(-50% + 2px));
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: ew-resize;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-accent, #999999);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 20px);
+    transform: translate(calc(-50% + 20px), -50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-light, #ffffff);
+    border: 2px solid var(--color-dark-600, #666666);
+    border-radius: 50%;
+    z-index: 3;
+    transition: border-color 0.3s;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    border: 2px solid var(--color-accent, #999999);
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 18px;
+    background-color: var(--color-dark-600, #666666);
+    mask-image: url("../../icons/icon-arrows.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 4;
+    pointer-events: none;
+    transition: background-color 0.3s;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: var(--color-accent, #999999);
+  }
+
+  &:active,
+  &:active::before {
+    border-color: var(--color-accent-light, #9ecc82);
+  }
+
+  &:active,
+  &:active::after {
+    background-color: var(--color-accent-light, #9ecc82);
+  }
+}

@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  column-gap: 24px;
+  justify-content: center;
+}
+
+.social__icon {
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: var(--color-dark-600, #666666);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+  &--vk::before {
+    mask-image: url("../../icons/social-icon-vk.svg");
+  }
+
+  &--youtube::before {
+    mask-image: url("../../icons/social-icon-youtube.svg");
+  }
+
+  &--telegram::before {
+    mask-image: url("../../icons/social-icon-telegram.svg");
+  }
+}
+
+.social__icon:hover::before,
+.social__icon:focus-visible::before {
+  background-color: var(--color-accent, #999999);
+}
+
+.social__icon:active {
+  opacity: 0.3;
+}

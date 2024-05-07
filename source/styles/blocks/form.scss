@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  //
+}
+
+.form__button {
+  padding-block: 15px;
+  font-size: 20px;
+  line-height: 1.3;
+}
