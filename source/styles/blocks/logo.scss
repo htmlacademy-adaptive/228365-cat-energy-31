@@ -3,6 +3,7 @@
   column-gap: 13px;
   transition: opacity 0.3s;
   flex-grow: 1;
+  line-height: 0;
 
   &:hover,
   &:focus-visible {
@@ -11,13 +12,29 @@
 
   &:active {
     opacity: 0.6;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
 .logo__icon {
-  //
+  @include tablet {
+    @include fluid-width-tab (60, 70);
+  }
 }
 
 .logo__title {
-  margin: auto;
+  &--small {
+    display: block;
+    margin-inline: auto;
+
+    @include tablet {
+      margin-inline: 0;
+
+      @include fluid-width-tab (101, 118);
+    }
+  }
+
+  &--large {
+    //
+  }
 }

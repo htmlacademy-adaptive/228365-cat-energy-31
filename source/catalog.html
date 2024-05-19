@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
 </head>
 
-<body class="page__body">
+<body class="body">
   <!-- header -->
   <header class="header header--inner">
     <div class="header__container container">
@@ -24,7 +24,7 @@
           <source width="60" height="50" media="(min-width: 768px)" srcset="images/logo/logo__icon_medium.svg" type="image/svg+xml">
           <img class="logo__icon" width="33" height="38" src="images/logo/logo__icon_small.svg" alt="Логотип магазина для котов" id="logo-icon">
         </picture>
-        <img class="logo__title" width="101" height="18" src="images/logo/logo__title_medium.svg" alt="Cat Energy" id="logo-title" aria-describedby="logo-icon">
+        <img class="logo__title logo__title--small" width="101" height="18" src="images/logo/logo__title_medium.svg" alt="Cat Energy" id="logo-title" aria-describedby="logo-icon">
       </a>
 
       <!-- navigation -->
@@ -32,7 +32,7 @@
         <button class="navigation__toggle button toggle-icon" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list navigation__list--close">
+        <ul class="navigation__list navigation__list--close navigation__list--nojs">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
           </li>
@@ -42,12 +42,13 @@
           <li class="navigation__item">
             <a class="navigation__link" href="programs.html">Подбор программы</a>
           </li>
+
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="content">
     <h1 class="visually-hidden">Каталог магазина кормов для котов и кошек Cat Energy</h1>
     <!-- main products -->
     <section class="products">
@@ -61,13 +62,13 @@
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-chicken-500_large@1x.png 1x, images/catalog/catalog__product-chicken-500_large@2x.png 2x" type="image/png">
-                <img class="product-card__image" width="68" height="86" src="images/catalog/catalog__product-chicken-500_small@1x.png" srcset="images/catalog/catalog__product-chicken-500_small@2x.png 2x" alt="Упаковка кошачьего корма оранжевого цвета CAT ENERGY PRO с курицей, с изображениями свежей курицы и злаков, вес 500 грамм" loading="lazy">
+                <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-chicken-500_small@1x.png" srcset="images/catalog/catalog__product-chicken-500_small@2x.png 2x" alt="Упаковка кошачьего корма оранжевого цвета CAT ENERGY PRO с курицей, с изображениями свежей курицы и злаков, вес 500 грамм" loading="lazy">
               </picture>
             </a>
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">100 г.</dd>
+                <dd class="product-card__definition">500 г.</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -113,7 +114,7 @@
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-fish-500_large@1x.png 1x, images/catalog/catalog__product-fish-500_large@2x.png 2x" type="image/png">
-                <img class="product-card__image" width="68" height="86" src="images/catalog/catalog__product-fish-500_small@1x.png" srcset="images/catalog/catalog__product-fish-500_small@2x.png 2x" alt="Упаковка кошачьего корма зелёного цвета CAT ENERGY PRO с рыбой, с изображениями свежей рыбы и злаков, вес 500 грамм" loading="lazy">
+                <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-fish-500_small@1x.png" srcset="images/catalog/catalog__product-fish-500_small@2x.png 2x" alt="Упаковка кошачьего корма зелёного цвета CAT ENERGY PRO с рыбой, с изображениями свежей рыбы и злаков, вес 500 грамм" loading="lazy">
               </picture>
             </a>
             <dl class="product-card__list">
@@ -165,7 +166,7 @@
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-buckwheat-500_large@1x.png 1x, images/catalog/catalog__product-buckwheat-500_large@2x.png 2x" type="image/png">
-                <img class="product-card__image" width="68" height="86" src="images/catalog/catalog__product-buckwheat-500_small@1x.png" srcset="images/catalog/catalog__product-buckwheat-500_small@2x.png 2x" alt="Упаковка кошачьего корма синего цвета CAT ENERGY SLIM с гречкой и свежими овощами, вес 500 грамм" loading="lazy">
+                <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-buckwheat-500_small@1x.png" srcset="images/catalog/catalog__product-buckwheat-500_small@2x.png 2x" alt="Упаковка кошачьего корма синего цвета CAT ENERGY SLIM с гречкой и свежими овощами, вес 500 грамм" loading="lazy">
               </picture>
             </a>
             <dl class="product-card__list">
@@ -217,7 +218,7 @@
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-rice-500_large@1x.png 1x, images/catalog/catalog__product-rice-500_large@2x.png 2x" type="image/png">
-                <img class="product-card__image" width="68" height="86" src="images/catalog/catalog__product-rice-500_small@1x.png" srcset="images/catalog/catalog__product-rice-500_small@2x.png 2x" alt="Упаковка кошачьего корма фиолетового цвета CAT ENERGY SLIM с рисом и свежими овощми, вес 500 грамм" loading="lazy">
+                <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-rice-500_small@1x.png" srcset="images/catalog/catalog__product-rice-500_small@2x.png 2x" alt="Упаковка кошачьего корма фиолетового цвета CAT ENERGY SLIM с рисом и свежими овощми, вес 500 грамм" loading="lazy">
               </picture>
             </a>
             <dl class="product-card__list">
@@ -236,10 +237,10 @@
             </dl>
             <a class="product-card__button button button--primary" href="#">Заказать</a>
           </article>
-          <div class="products__item product-card">
+          <div class="products__item product-card product-card--secondary">
             <a class="product-card__text-wrapper" href="#" tabindex="-1">
-              <h3 class="product-card__title title product-card__title--more">Показать еще 100500 товаров</h3>
-              <p class="product-card__subtitle">На самом деле вкусов гораздо больше!</p>
+              <h3 class="product-card__title title product-card__title--secondary">Показать еще 100500 товаров</h3>
+              <p class="product-card__subtitle">На самом деле вкусов гораздо больше!</p>
             </a>
             <a class="product-card__button button button--secondary" href="#">Показать все</a>
           </div>
@@ -308,6 +309,7 @@
         </article>
       </div>
     </section>
+
     <!-- promo -->
     <section class="promo">
       <div class="container">
@@ -330,21 +332,23 @@
     <!-- contacts -->
     <section class="contacts">
       <div class="contacts__container container contacts__container--change-bg">
-        <h2 class="visually-hidden">Контакты</h2>
-        <h3 class="contacts__title title">Приглашаем к сотрудничеству дилеров!</h3>
-        <address class="contacts__address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span>Санкт-Петербург</span>
-        </address>
+        <div class="contacts__content">
+          <h2 class="visually-hidden">Контакты</h2>
+          <h3 class="contacts__title title">Приглашаем к сотрудничеству дилеров!</h3>
+          <address class="contacts__address">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
 
       <!-- map -->
-      <div class="map">
+      <div class="contacts__map map">
         <span class="visually-hidden">Наше местоположение на карте</span>
-        <iframe class="map__frame" width="1440" height="400" allowfullscreen loading="lazy" title="Карта с нашим местоположением"></iframe>
+        <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e01fcb9e2d8c07c526bb53341fe31b72de6b512a0f40072987b74fc0b1c7dca&amp;source=constructor" width="1440" height="400" allowfullscreen loading="lazy" title="Карта с нашим местоположением"></iframe>
         <div class="map__fallback">
           <picture>
-            <source width="1440" height="400" media="(min-width: 1280px)" srcset="images/map/map__image_large@1x.jpg 1x, images/map/map__image_large@2x.jpg 2x" type="image/jpeg">
+            <source width="1440" height="400" media="(min-width: 1200px)" srcset="images/map/map__image_large@1x.jpg 1x, images/map/map__image_large@2x.jpg 2x" type="image/jpeg">
             <source width="768" height="400" media="(min-width: 768px)" srcset="images/map/map__image_medium@1x.jpg 1x, images/map/map__image_medium@2x.jpg 2x" type="image/jpeg">
             <img class="map__image" width="320" height="362" src="images/map/map__image_small@1x.jpg" srcset="images/map/map__image_small@2x.jpg 2x" alt="Карта с нашим местоположением" loading="lazy">
           </picture>
@@ -355,7 +359,7 @@
     <div class="footer__links">
       <div class="footer__container container">
         <a class="footer__logo logo" href="index.html" aria-current="page">
-          <img class="logo__title" width="128" height="24" src="images/logo/logo__title_medium.svg" alt="Логотип магазина для котов Cat Energy" loading="lazy">
+          <img class="logo__title logo__title--large" width="128" height="24" src="images/logo/logo__title_medium.svg" alt="Логотип магазина для котов Cat Energy" loading="lazy">
         </a>
 
         <!-- social media -->

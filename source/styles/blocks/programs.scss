@@ -1,6 +1,16 @@
 .programs {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-block: 10px;
+  display: grid;
+
+  @include fluid-gap-mob(20, 30);
+  padding-block-end: 20px;
+
+  @include tablet {
+    padding-block-end: 45px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    padding-block-end: 71px;
+  }
 }

@@ -4,6 +4,14 @@
 
 .footer__links {
   padding-block: 40px;
+
+  @include tablet {
+    padding-block: 55px;
+  }
+
+  @include desktop {
+    padding-block: 66px;
+  }
 }
 
 .footer__container {
@@ -11,21 +19,40 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
-  //
+  max-width: 162px;
 }
+
 
 .footer__social {
   align-self: stretch;
+
+  @include tablet {
+    align-self: center;
+  }
 }
 
 .footer__list {
   padding-block: 20px;
   box-shadow: 0 -1px 0 0 var(--color-secondary-semidark, inherit), 0 1px 0 0 var(--color-secondary-semidark, inherit);
+
+  @include tablet {
+    box-shadow: 0 0 transparent;
+    padding-block: 0;
+  }
 }
 
 .footer__developer-logo {
   align-self: stretch;
+
+  @include tablet {
+    align-self: start;
+  }
 }

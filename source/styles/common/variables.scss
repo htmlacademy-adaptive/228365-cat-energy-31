@@ -1,6 +1,6 @@
 :root {
-  --font-basic: "Lato", sans-serif;
-  --font-title: "Oswald", sans-serif;
+  --font-basic: "Lato", "Arial", sans-serif;
+  --font-title: "Oswald", "Arial", sans-serif;
 
   --color-light: #ffffff;
   --color-light-rgb: 255, 255, 255;
@@ -17,9 +17,15 @@
   --color-secondary-dark: #cdcdcd;
   --color-accent: #68b738;
   --color-accent-light: #9ecc82;
-  --color-accent-dark: #5eaa2f;
+  --color-accent-semidark: #5eaa2f;
+  --color-complementary-medium: #414045;
   --color-alert: #ff8282;
+  --color-alert-light: #ffeeee;
 
   --container-width: 1220px;
   --container-padding-x: 20px;
+
+  @include tablet {
+    --container-padding-x: 30px;
+  }
 }

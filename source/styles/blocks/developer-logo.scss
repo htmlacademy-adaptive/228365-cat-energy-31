@@ -1,5 +1,20 @@
 .developer-logo {
   transition: opacity 0.3s;
+
+  @include hover {
+    .developer-logo__title::after {
+      background-color: var(--color-accent, inherit);
+    }
+  }
+
+  &:focus-visible .developer-logo__title::after {
+    background-color: var(--color-accent, inherit);
+  }
+
+  &:active {
+    opacity: 0.3;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 
@@ -23,13 +38,4 @@
     background-size: contain;
     transition: background-color 0.3s;
   }
-}
-
-.developer-logo:hover .developer-logo__title::after,
-.developer-logo:focus-visible .developer-logo__title::after {
-  background-color: var(--color-accent, inherit);
-}
-
-.developer-logo:active {
-  opacity: 0.3;
 }

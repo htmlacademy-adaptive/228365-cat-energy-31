@@ -1,25 +1,33 @@
 .before-after {
-  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center center;
+  margin-inline: auto;
+  margin-block: 0;
+  padding: 0;
   position: relative;
-  width: 280px;
-  height: 256px;
+  max-width: 560px;
+  height: auto;
+}
+
+.before-after picture {
+  display: contents;
 }
 
 .before-after__image {
-  position: absolute;
   display: block;
-  top: 0;
-  left: 0;
+  grid-column: 1 / -1;
+  grid-row: 1;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 
   &--before {
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    clip-path: inset(0 50% 0 0);
   }
 
   &--after {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: inset(0 0 0 50%);
   }
 }
 
@@ -50,7 +58,10 @@
   cursor: ew-resize;
   transition: background-color 0.3s, border-color 0.3s;
 
-  &:hover,
+  @include hover {
+    background-color: var(--color-accent, #999999);
+  }
+
   &:focus-visible {
     background-color: var(--color-accent, #999999);
   }
@@ -70,7 +81,12 @@
     transition: border-color 0.3s;
   }
 
-  &:hover::before,
+  @include hover {
+    &::before {
+      border: 2px solid var(--color-accent, #999999);
+    }
+  }
+
   &:focus-visible::before {
     border: 2px solid var(--color-accent, #999999);
   }
@@ -94,7 +110,13 @@
     transition: background-color 0.3s;
   }
 
-  &:hover::after,
+  @include hover {
+    &::after {
+      background-color: var(--color-accent, #999999);
+    }
+  }
+
+
   &:focus-visible::after {
     background-color: var(--color-accent, #999999);
   }

@@ -28,13 +28,19 @@
   &--telegram::before {
     mask-image: url("../../icons/social-icon-telegram.svg");
   }
-}
 
-.social__icon:hover::before,
-.social__icon:focus-visible::before {
-  background-color: var(--color-accent, #999999);
-}
+  @include hover {
+    &::before {
+      background-color: var(--color-accent, #999999);
+    }
+  }
 
-.social__icon:active {
-  opacity: 0.3;
+  &:focus-visible::before {
+    background-color: var(--color-accent, #999999);
+  }
+
+  &:active {
+    opacity: 0.3;
+    -webkit-tap-highlight-color: transparent;
+  }
 }

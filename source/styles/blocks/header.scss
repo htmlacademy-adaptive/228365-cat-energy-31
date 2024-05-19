@@ -1,9 +1,18 @@
 .header {
-  padding-block: 13px;
+  padding-block: 13px 14px;
   background-color: var(--color-light, inherit);
+
+  @include desktop {
+    padding-block: 46px 0;
+    background-color: transparent;
+  }
 
   &--inner {
     box-shadow: 0 1px 0 0 var(--color-secondary-semidark, inherit);
+
+    @include tablet {
+      box-shadow: none;
+    }
   }
 }
 
@@ -12,6 +21,10 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 13px;
+
+  &:has(.navigation__list--nojs) {
+    flex-wrap: wrap;
+  }
 }
 
 .header__logo {
@@ -19,5 +32,7 @@
 }
 
 .header__navigation {
-  //
+  &:has(.navigation__list--nojs) {
+    display: contents;
+  }
 }

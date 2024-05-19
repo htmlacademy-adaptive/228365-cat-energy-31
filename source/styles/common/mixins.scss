@@ -8,6 +8,35 @@
   }
 }
 
+@mixin fluid-text-mob($min, $max) {
+  font-size: clamp(#{$min}px, calc(#{$max} / 768 * 100vw), #{$max}px);
+}
+
+@mixin fluid-text-tab($min, $max) {
+  font-size: clamp(#{$min}px, calc(#{$max} / 1200 * 100vw), #{$max}px);
+}
+
+@mixin fluid-width-mob($min, $max) {
+  min-width: clamp(#{$min}px, calc(#{$max} / 768 * 100vw), #{$max}px);
+}
+
+@mixin fluid-width-tab($min, $max) {
+  width: clamp(#{$min}px, calc(#{$max} / 1200 * 100vw), #{$max}px);
+}
+
+@mixin fluid-gap-mob($min, $max) {
+  gap: clamp(#{$min}px, calc(#{$max} / 768 * 100vw), #{$max}px);
+}
+
+@mixin fluid-gap-tab($min, $max) {
+  gap: clamp(#{$min}px, calc(#{$max} / 1200 * 100vw), #{$max}px);
+}
+
+@mixin fluid-height-mob($min, $max) {
+  min-height: clamp(#{$min}px, calc(#{$max} / 768 * 100vw), #{$max}px);
+}
+
+// Центрирует элемент
 @mixin flex-center($isInline: false) {
   @if $isInline {
     display: inline-flex;
@@ -19,4 +48,19 @@
 
   justify-content: center;
   align-items: center;
+}
+
+// Убирает залипание на тач-экранах
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
 }

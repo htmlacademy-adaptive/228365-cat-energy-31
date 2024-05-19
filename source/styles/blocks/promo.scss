@@ -2,21 +2,51 @@
   padding-block: 20px 40px;
   background-image: linear-gradient(var(--color-accent, inherit) 100%, transparent);
   background-repeat: no-repeat;
-  background-position: left 0 top 30px;
+  background-position: 0 30px;
   background-size: 100% 2px;
+
+  @include tablet {
+    padding-block: 0 80px;
+    background-position: 0 14px;
+  }
+
+  @include desktop {
+    padding-block-end: 104px;
+    background-position: 0 18px;
+  }
 }
 
 .promo__title {
-  width: max-content;
-  margin-bottom: 32px;
-  font-size: 24px;
+  width: fit-content;
+  margin-block-end: 32px;
   box-shadow: -40px 0 0 0 var(--color-light,), 40px 0 0 0 var(--color-light,);
   background-color: var(--color-light,);
+
+  @include mobile {
+    @include fluid-text-mob(24, 32);
+  }
+
+  @include tablet {
+    @include fluid-text-tab(32, 40);
+    margin-inline-start: 40px;
+    margin-block-end: 66px;
+  }
+
+  @include desktop {
+    margin-inline-start: 0;
+    margin-block-end: 72px;
+  }
 }
 
 .promo__description {
-  margin-bottom: 24px;
-  font-size: 16px;
+  margin-block-end: 24px;
+
+  @include fluid-text-mob(16, 24);
   line-height: 1.5;
   text-align: center;
+
+  @include tablet {
+    padding-inline: 38px;
+    text-wrap: wrap;
+  }
 }

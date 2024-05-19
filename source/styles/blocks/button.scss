@@ -1,6 +1,4 @@
-@mixin button($font-size, $line-height, $text-color, $bg-color) {
-  font-size: $font-size;
-  line-height: $line-height;
+@mixin button($text-color, $bg-color) {
   color: $text-color;
   background-color: $bg-color;
 }
@@ -9,6 +7,8 @@
   @include flex-center;
   padding: 10px 26px;
   font-family: var(--font-title,);
+  font-size: 16px;
+  line-height: 1.25;
   text-transform: uppercase;
   border: none;
   background-color: transparent;
@@ -23,12 +23,11 @@
   }
 
   &--primary {
-    @include button(16px, 20px, var(--color-light), var(--color-accent));
+    @include button(var(--color-light), var(--color-accent));
 
     &:hover,
-    &:active,
     &:focus-visible {
-      background-color: var(--color-accent-dark, inherit);
+      background-color: var(--color-accent-semidark, inherit);
     }
 
     &:active {
@@ -37,10 +36,9 @@
   }
 
   &--secondary {
-    @include button(16px, 20px, var(--color-dark), var(--color-secondary));
+    @include button(var(--color-dark), var(--color-secondary));
 
-    &:hover,
-    &:active {
+    @include hover {
       background-color: var(--color-secondary-light, inherit);
     }
   }

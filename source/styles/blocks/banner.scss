@@ -1,6 +1,48 @@
 .banner {
+  display: flex;
+  padding: 65px 20px 45px;
+  justify-content: center;
+  justify-self: center;
+  max-width: 290px;
+  width: 100%;
   background-color: var(--color-accent, inherit);
-  padding: 58px;
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85) 100%, #68b738),
+    image-set(
+      "../images/backgrounds/banner-bg-normal@1x.jpg" 1x,
+      "../images/backgrounds/banner-bg-normal@2x.jpg" 2x
+    );
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+
+  @include tablet {
+    padding: 63px 88px 73px;
+    min-height: 200px;
+    max-width: 708px;
+    width: 100%;
+    justify-content: flex-start;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85) 100%, #68b738),
+      image-set(
+        "../images/backgrounds/banner-bg-wide@1x.jpg" 1x,
+        "../images/backgrounds/banner-bg-wide@2x.jpg" 2x
+      );
+  }
+
+  @include desktop {
+    padding: 63px 40px 45px;
+    grid-row: 2;
+    grid-column: 2 / 3;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85) 100%, #68b738),
+      image-set(
+        "../images/backgrounds/banner-bg-normal@1x.jpg" 1x,
+        "../images/backgrounds/banner-bg-normal@2x.jpg" 2x
+      );
+    background-position: 0 0, calc(100% + 5px) 50%;
+  }
 }
 
 .banner__description {
@@ -8,6 +50,7 @@
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  max-width: 164px;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
@@ -16,11 +59,26 @@
   &::before {
     content: "";
     display: block;
-    width: 58px;
-    height: 64px;
+    flex-shrink: 0;
+    width: 56px;
+    aspect-ratio: 0.93 / 1;
     background-image: url("../../icons/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    text-align: start;
+    max-width: none;
+    width: 494px;
+    column-gap: 275px;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    text-align: center;
+    width: auto;
   }
 }
