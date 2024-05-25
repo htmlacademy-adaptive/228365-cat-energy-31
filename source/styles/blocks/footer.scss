@@ -6,7 +6,7 @@
   padding-block: 40px;
 
   @include tablet {
-    padding-block: 55px;
+    padding-block: 57px;
   }
 
   @include desktop {
@@ -27,7 +27,10 @@
 }
 
 .footer__logo {
-  max-width: 162px;
+  @include tablet {
+    max-width: 162.64px;
+    width: 100%;
+  }
 }
 
 

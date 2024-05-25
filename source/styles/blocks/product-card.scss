@@ -8,7 +8,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 71px auto 1fr;
     --padding-x: 37px;
-    --padding-end: 40px;
+    --padding-end: 39px;
     padding-inline: var(--padding-x);
     padding-block: 10px var(--padding-end);
 
@@ -39,7 +39,7 @@
   &--simple {
     display: flex;
     flex-direction: column;
-    padding-block: 14px 20px;
+    padding-block: 13px 19px;
     box-shadow: 0 -1px 0 0 var(--color-secondary-dark, inherit), inset 0 -1px 0 0 var(--color-secondary-dark, inherit);
 
     @include tablet {
@@ -109,15 +109,25 @@
     text-align: center;
   }
 
+  @include desktop {
+    margin-bottom: 25px;
+  }
+
   &--secondary {
     display: flex;
     flex-direction: column;
     align-self: center;
     align-items: center;
     row-gap: 23px;
+    margin-bottom: 9px;
 
     @include tablet {
       row-gap: 50px;
+      margin-bottom: 22px;
+    }
+
+    @include desktop {
+      row-gap: 40px;
     }
   }
 
@@ -143,7 +153,8 @@
   }
 
   .product-card--simple > & {
-    margin-bottom: 13px;
+    margin-bottom: 11px;
+    line-height: 1;
 
     @include tablet {
       margin-bottom: 0;
@@ -195,14 +206,20 @@
     row-gap: 7px;
   }
 
+  @include desktop {
+    row-gap: 6px;
+  }
+
   .product-card--simple > & {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 50px;
 
     @include tablet {
       grid-column: 2 / 3;
       grid-row: 1;
+      gap: 52px;
     }
   }
 }
@@ -219,6 +236,11 @@
     line-height: 1.25;
     padding-block-end: 5px;
     box-shadow: inset 0 -1px 0 0 var(--color-secondary-dark, #cdcdcd);
+  }
+
+  @include desktop {
+    padding-block-end: 6px;
+    box-shadow: 0 1px 0 0 var(--color-secondary-dark, #cdcdcd);
   }
 }
 
@@ -239,11 +261,13 @@
 }
 
 .product-card__subtitle {
-  //
+  @include fluid-text-mob(12, 16);
+  // line-height: 1.33;
+  margin-block-end: 4px;
 }
 
 .product-card__button {
-  margin-block-start: 21px;
+  margin-block-start: 17px; //21
   grid-column: 1 / -1;
 
   @include tablet {
@@ -251,8 +275,12 @@
     margin-block-start: 32px;
   }
 
+  @include desktop {
+    margin-block-start: 35px;
+  }
+
   .product-card--simple > & {
-    margin-block-start: 15px;
+    margin-block-start: 12px;
 
     @include tablet {
       margin-block-start: 25px;

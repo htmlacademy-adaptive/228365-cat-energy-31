@@ -1,12 +1,12 @@
 .products {
-  padding-block: 27px 15px;
+  padding-block: 28px 15px;
 
   @include tablet {
-    padding-block: 40px 74px;
+    padding-block: 38px 74px;
   }
 
   @include desktop {
-    padding-block: 65px 71px;
+    padding-block: 64px 73px;
   }
 }
 

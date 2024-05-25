@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 14px;
 
   @include tablet {
     max-width: 828px;
@@ -21,6 +21,8 @@
 }
 
 .form__field {
+  caret-color: var(--color-accent, #55b738);
+
   @include tablet {
     flex-grow: 1;
   }

@@ -28,7 +28,9 @@
 }
 
 .header__logo {
-  //
+  @include mobile {
+    flex-grow: 1;
+  }
 }
 
 .header__navigation {

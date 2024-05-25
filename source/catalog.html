@@ -10,8 +10,9 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
-  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="script" href="scripts/index.js" media="(max-width: 767px)" type="text/javascript">
 </head>
 
 <body class="body">
@@ -51,7 +52,7 @@
   <main class="content">
     <h1 class="visually-hidden">Каталог магазина кормов для котов и кошек Cat Energy</h1>
     <!-- main products -->
-    <section class="products">
+    <section class="products" data-test="catalog">
       <div class="products__container container">
         <h2 class="products__title title">Каталог продукции</h2>
         <div class="products__list">
@@ -61,6 +62,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-chicken-500_large@1x.webp 1x, images/catalog/catalog__product-chicken-500_large@2x.webp 2x" type="image/webp">
+                <source width="72" height="84" srcset="images/catalog/catalog__product-chicken-500_small@1x.webp 1x, images/catalog/catalog__product-chicken-500_small@2x.webp 2x" type="image/webp">
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-chicken-500_large@1x.png 1x, images/catalog/catalog__product-chicken-500_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-chicken-500_small@1x.png" srcset="images/catalog/catalog__product-chicken-500_small@2x.png 2x" alt="Упаковка кошачьего корма оранжевого цвета CAT ENERGY PRO с курицей, с изображениями свежей курицы и злаков, вес 500 грамм" loading="lazy">
               </picture>
@@ -68,7 +71,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">500 г.</dd>
+                <dd class="product-card__definition">500 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -87,6 +90,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-chicken-1000_large@1x.webp 1x, images/catalog/catalog__product-chicken-1000_large@2x.webp 2x" type="image/webp">
+                <source width="84" height="100" srcset="images/catalog/catalog__product-chicken-1000_small@1x.webp 1x, images/catalog/catalog__product-chicken-1000_small@2x.webp 2x" type="image/webp">
                 <source width="172" height="196" media="(min-width: 768px)" srcset="images/catalog/catalog__product-chicken-1000_large@1x.png 1x, images/catalog/catalog__product-chicken-1000_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="84" height="100" src="images/catalog/catalog__product-chicken-1000_small@1x.png" srcset="images/catalog/catalog__product-chicken-1000_small@2x.png 2x" alt="Упаковка кошачьего корма оранжевого цвета CAT ENERGY PRO с курицей, с изображениями свежей курицы и злаков, вес 1000 грамм" loading="lazy">
               </picture>
@@ -94,7 +99,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">1000 г.</dd>
+                <dd class="product-card__definition">1000 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -113,6 +118,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-fish-500_large@1x.webp 1x, images/catalog/catalog__product-fish-500_large@2x.webp 2x" type="image/webp">
+                <source width="72" height="84" srcset="images/catalog/catalog__product-fish-500_small@1x.webp 1x, images/catalog/catalog__product-fish-500_small@2x.webp 2x" type="image/webp">
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-fish-500_large@1x.png 1x, images/catalog/catalog__product-fish-500_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-fish-500_small@1x.png" srcset="images/catalog/catalog__product-fish-500_small@2x.png 2x" alt="Упаковка кошачьего корма зелёного цвета CAT ENERGY PRO с рыбой, с изображениями свежей рыбы и злаков, вес 500 грамм" loading="lazy">
               </picture>
@@ -120,7 +127,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">500 г.</dd>
+                <dd class="product-card__definition">500 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -139,6 +146,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-fish-1000_large@1x.webp 1x, images/catalog/catalog__product-fish-1000_large@2x.webp 2x" type="image/webp">
+                <source width="84" height="100" srcset="images/catalog/catalog__product-fish-1000_small@1x.webp 1x, images/catalog/catalog__product-fish-1000_small@2x.webp 2x" type="image/webp">
                 <source width="172" height="196" media="(min-width: 768px)" srcset="images/catalog/catalog__product-fish-1000_large@1x.png 1x, images/catalog/catalog__product-fish-1000_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="84" height="100" src="images/catalog/catalog__product-fish-1000_small@1x.png" srcset="images/catalog/catalog__product-fish-1000_small@2x.png 2x" alt="Упаковка кошачьего корма зелёного цвета CAT ENERGY PRO с рыбой, с изображениями свежей рыбы и злаков, вес 1000 грамм" loading="lazy">
               </picture>
@@ -146,7 +155,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">1000 г.</dd>
+                <dd class="product-card__definition">1000 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -165,6 +174,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-buckwheat-500_large@1x.webp 1x, images/catalog/catalog__product-buckwheat-500_large@2x.webp 2x" type="image/webp">
+                <source width="72" height="84" srcset="images/catalog/catalog__product-buckwheat-500_small@1x.webp 1x, images/catalog/catalog__product-buckwheat-500_small@2x.webp 2x" type="image/webp">
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-buckwheat-500_large@1x.png 1x, images/catalog/catalog__product-buckwheat-500_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-buckwheat-500_small@1x.png" srcset="images/catalog/catalog__product-buckwheat-500_small@2x.png 2x" alt="Упаковка кошачьего корма синего цвета CAT ENERGY SLIM с гречкой и свежими овощами, вес 500 грамм" loading="lazy">
               </picture>
@@ -172,7 +183,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">500 г.</dd>
+                <dd class="product-card__definition">500 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -191,6 +202,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-buckwheat-1000_large@1x.webp 1x, images/catalog/catalog__product-buckwheat-1000_large@2x.webp 2x" type="image/webp">
+                <source width="84" height="100" srcset="images/catalog/catalog__product-buckwheat-1000_small@1x.webp 1x, images/catalog/catalog__product-buckwheat-1000_small@2x.webp 2x" type="image/webp">
                 <source width="172" height="196" media="(min-width: 768px)" srcset="images/catalog/catalog__product-buckwheat-1000_large@1x.png 1x, images/catalog/catalog__product-buckwheat-1000_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="84" height="100" src="images/catalog/catalog__product-buckwheat-1000_small@1x.png" srcset="images/catalog/catalog__product-buckwheat-1000_small@2x.png 2x" alt="Упаковка кошачьего корма синего цвета CAT ENERGY SLIM с гречкой и свежими овощами, вес 1000 грамм" loading="lazy">
               </picture>
@@ -198,7 +211,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">1000 г.</dd>
+                <dd class="product-card__definition">1000 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -217,6 +230,8 @@
             </h3>
             <a class="product-card__image-wrapper" href="#" tabindex="-1">
               <picture>
+                <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-rice-500_large@1x.webp 1x, images/catalog/catalog__product-rice-500_large@2x.webp 2x" type="image/webp">
+                <source width="72" height="84" srcset="images/catalog/catalog__product-rice-500_small@1x.webp 1x, images/catalog/catalog__product-rice-500_small@2x.webp 2x" type="image/webp">
                 <source width="163" height="174" media="(min-width: 768px)" srcset="images/catalog/catalog__product-rice-500_large@1x.png 1x, images/catalog/catalog__product-rice-500_large@2x.png 2x" type="image/png">
                 <img class="product-card__image" width="72" height="84" src="images/catalog/catalog__product-rice-500_small@1x.png" srcset="images/catalog/catalog__product-rice-500_small@2x.png 2x" alt="Упаковка кошачьего корма фиолетового цвета CAT ENERGY SLIM с рисом и свежими овощми, вес 500 грамм" loading="lazy">
               </picture>
@@ -224,7 +239,7 @@
             <dl class="product-card__list">
               <div class="product-card__item">
                 <dt class="product-card__term">Масса</dt>
-                <dd class="product-card__definition">500 г.</dd>
+                <dd class="product-card__definition">500 г</dd>
               </div>
               <div class="product-card__item">
                 <dt class="product-card__term">Вкус</dt>
@@ -248,7 +263,7 @@
       </div>
     </section>
     <!-- additional products -->
-    <section class="additional-products">
+    <section class="additional-products" data-test="additional">
       <div class="additional-products__container container">
         <h2 class="additional-products__title title">Дополнительные товары</h2>
         <div class="additional-products__list">
@@ -345,9 +360,12 @@
       <!-- map -->
       <div class="contacts__map map">
         <span class="visually-hidden">Наше местоположение на карте</span>
-        <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e01fcb9e2d8c07c526bb53341fe31b72de6b512a0f40072987b74fc0b1c7dca&amp;source=constructor" width="1440" height="400" allowfullscreen loading="lazy" title="Карта с нашим местоположением"></iframe>
+        <div class="map__frame" role="application" id="map-placeholder"></div>
         <div class="map__fallback">
           <picture>
+            <source width="1440" height="400" media="(min-width: 1200px)" srcset="images/map/map__image_large@1x.webp 1x, images/map/map__image_large@2x.webp 2x" type="image/webp">
+            <source width="768" height="400" media="(min-width: 768px)" srcset="images/map/map__image_medium@1x.webp 1x, images/map/map__image_medium@2x.webp 2x" type="image/webp">
+            <source width="320" height="362" srcset="images/map/map__image_small@1x.webp 1x, images/map/map__image_small@2x.webp 2x" type="image/webp">
             <source width="1440" height="400" media="(min-width: 1200px)" srcset="images/map/map__image_large@1x.jpg 1x, images/map/map__image_large@2x.jpg 2x" type="image/jpeg">
             <source width="768" height="400" media="(min-width: 768px)" srcset="images/map/map__image_medium@1x.jpg 1x, images/map/map__image_medium@2x.jpg 2x" type="image/jpeg">
             <img class="map__image" width="320" height="362" src="images/map/map__image_small@1x.jpg" srcset="images/map/map__image_small@2x.jpg 2x" alt="Карта с нашим местоположением" loading="lazy">
@@ -393,6 +411,7 @@
     </div>
   </footer>
 
+  <script src="scripts/map.js" defer></script>
   <script src="scripts/index.js" defer></script>
 </body>
 

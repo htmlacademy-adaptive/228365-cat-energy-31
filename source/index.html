@@ -10,13 +10,15 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
-  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
+  <link rel="preload" as="font" href="./fonts/lato/Lato-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="./fonts/oswald/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="image" href="images/hero/hero__image_large@1x.webp" media="(min-width: 1200px)" type="image/webp">
+  <link rel="preload" as="script" href="scripts/index.js" media="(max-width: 767px)" type="text/javascript">
 </head>
 
 <body class="body">
   <!-- header -->
-  <header class="header">
+  <header class="header" data-test="header">
     <div class="header__container container">
       <a class="header__logo logo" href="index.html" aria-current="page">
         <picture>
@@ -49,21 +51,24 @@
 
   <main class="content">
     <!-- hero -->
-    <section class="hero">
+    <section class="hero" data-test="hero">
       <div class="hero__container container">
         <h1 class="hero__title title">Функциональное питание для котов</h1>
         <p class="hero__subtitle title">Занялся собой? Займись котом!</p>
         <picture>
+          <source width="552" height="499" media="(min-width: 1200px)" srcset="images/hero/hero__image_large@1x.webp 1x, images/hero/hero__image_large@2x.webp 2x" type="image/webp">
+          <source width="708" height="608" media="(min-width: 768px)" srcset="images/hero/hero__image_medium@1x.webp 1x, images/hero/hero__image_medium@2x.webp 2x" type="image/webp">
+          <source width="280" height="270" srcset="images/hero/hero__image_small@1x.webp 1x, images/hero/hero__image_small@2x.webp 2x" type="image/webp">
           <source width="552" height="499" media="(min-width: 1200px)" srcset="images/hero/hero__image_large@1x.png 1x, images/hero/hero__image_large@2x.png 2x" type="image/png">
           <source width="708" height="608" media="(min-width: 768px)" srcset="images/hero/hero__image_medium@1x.png 1x, images/hero/hero__image_medium@2x.png 2x" type="image/png">
-          <img class="hero__image" width="280" height="270" src="images/hero/hero__image_small@1x.png" srcset="images/hero/hero__image_small@2x.png 2x" alt="Оранжевая упаковка корма для кошек CAT ENERGY PRO с изображением котика в костюме супер-героя на крышке" loading="lazy">
+          <img class="hero__image" width="280" height="270" src="images/hero/hero__image_small@1x.png" srcset="images/hero/hero__image_small@2x.png 2x" alt="Оранжевая упаковка корма для кошек CAT ENERGY PRO с изображением котика в костюме супер-героя на крышке" loading="eager">
         </picture>
         <a class="hero__button button button--primary" href="/programs">Подобрать программу</a>
       </div>
     </section>
 
     <!-- programs -->
-    <section class="programs container">
+    <section class="programs container" data-test="programs">
       <h2 class="visually-hidden">Программы здорового питания для котов</h2>
       <article class="program program--icon-lazy-cat">
         <h3 class="program__title title">Похудение</h3>
@@ -78,7 +83,7 @@
     </section>
 
     <!-- how it works -->
-    <section class="how-it-works">
+    <section class="how-it-works" data-test="features">
       <div class="container">
         <h2 class="how-it-works__title title">Как это работает</h2>
         <ul class="how-it-works__list">
@@ -91,13 +96,13 @@
     </section>
 
     <!-- live example -->
-    <section class="live-example">
+    <section class="live-example" data-test="proof">
       <div class="live-example__container container">
         <h2 class="live-example__title title">Живой пример</h2>
         <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <dl class="live-example__list">
           <div class="live-example__item live-example__item--value">
-            <dt class="live-example__term title">5 кг.</dt>
+            <dt class="live-example__term title">5 кг</dt>
             <dd class="live-example__definition">снижение веса</dd>
           </div>
           <div class="live-example__item live-example__item--value">
@@ -114,10 +119,14 @@
         <figure class="live-example__before-after before-after">
           <figcaption class="visually-hidden">Интерактивный пример до и после, с фотографиями кота</figcaption>
           <picture>
+            <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__fat-cat_large@1x.webp 1x, images/before-after/before-after__fat-cat_large@2x.webp 2x" type="image/webp">
+            <source width="280" height="256" srcset="images/before-after/before-after__fat-cat_small@1x.webp 1x, images/before-after/before-after__fat-cat_small@2x.webp 2x" type="image/webp">
             <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__fat-cat_large@1x.png 1x, images/before-after/before-after__fat-cat_large@2x.png 2x" type="image/png">
             <img class="before-after__image before-after__image--before" width="280" height="256" src="images/before-after/before-after__fat-cat_small@1x.png" srcset="images/before-after/before-after__fat-cat_small@2x.png 2x" alt="Результат до, ленивый толстый кот" loading="lazy">
           </picture>
           <picture>
+            <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__slim-cat_large@1x.webp 1x, images/before-after/before-after__slim-cat_large@2x.webp 2x" type="image/webp">
+            <source width="280" height="256" srcset="images/before-after/before-after__slim-cat_small@1x.webp 1x, images/before-after/before-after__slim-cat_small@2x.webp 2x" type="image/webp">
             <source width="560" height="512" media="(min-width: 768px)" srcset="images/before-after/before-after__slim-cat_large@1x.png 1x, images/before-after/before-after__slim-cat_large@2x.png 2x" type="image/png">
             <img class="before-after__image before-after__image--after" width="280" height="256" src="images/before-after/before-after__slim-cat_small@1x.png" srcset="images/before-after/before-after__slim-cat_small@2x.png 2x" alt="Результат после, активный здоровый кот" loading="lazy">
           </picture>
@@ -134,7 +143,7 @@
 
   <footer class="footer">
     <!-- contacts -->
-    <section class="contacts">
+    <section class="contacts" data-test="contacts">
       <div class="contacts__container container">
         <div class="contacts__content">
           <h2 class="visually-hidden">Контакты</h2>
@@ -149,9 +158,12 @@
       <!-- map -->
       <div class="contacts__map map">
         <span class="visually-hidden">Наше местоположение на карте</span>
-        <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e01fcb9e2d8c07c526bb53341fe31b72de6b512a0f40072987b74fc0b1c7dca&amp;source=constructor" width="1440" height="400" allowfullscreen loading="lazy" title="Карта с нашим местоположением"></iframe>
+        <div class="map__frame" role="application" id="map-placeholder"></div>
         <div class="map__fallback">
           <picture>
+            <source width="1440" height="400" media="(min-width: 1200px)" srcset="images/map/map__image_large@1x.webp 1x, images/map/map__image_large@2x.webp 2x" type="image/webp">
+            <source width="768" height="400" media="(min-width: 768px)" srcset="images/map/map__image_medium@1x.webp 1x, images/map/map__image_medium@2x.webp 2x" type="image/webp">
+            <source width="320" height="362" srcset="images/map/map__image_small@1x.webp 1x, images/map/map__image_small@2x.webp 2x" type="image/webp">
             <source width="1440" height="400" media="(min-width: 1200px)" srcset="images/map/map__image_large@1x.jpg 1x, images/map/map__image_large@2x.jpg 2x" type="image/jpeg">
             <source width="768" height="400" media="(min-width: 768px)" srcset="images/map/map__image_medium@1x.jpg 1x, images/map/map__image_medium@2x.jpg 2x" type="image/jpeg">
             <img class="map__image" width="320" height="362" src="images/map/map__image_small@1x.jpg" srcset="images/map/map__image_small@2x.jpg 2x" alt="Карта с нашим местоположением" loading="lazy">
@@ -160,7 +172,7 @@
       </div>
     </section>
 
-    <div class="footer__links">
+    <div class="footer__links" data-test="footer">
       <div class="footer__container container">
         <a class="footer__logo logo" href="#" aria-current="page">
           <img class="logo__title logo__title--large" width="128" height="24" src="images/logo/logo__title_medium.svg" alt="Логотип магазина для котов Cat Energy" loading="lazy">
@@ -199,6 +211,7 @@
 
   <script src="scripts/index.js" defer></script>
   <script src="scripts/before-after.js" defer></script>
+  <script src="scripts/map.js" defer></script>
 </body>
 
 </html>

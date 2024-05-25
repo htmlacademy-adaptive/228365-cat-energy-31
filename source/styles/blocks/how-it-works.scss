@@ -2,7 +2,7 @@
   padding-block-end: 49px;
 
   @include tablet {
-    padding-block-end: 57px;
+    padding-block-end: 59px;
   }
 
   @include desktop {
@@ -19,6 +19,7 @@
 
   @include tablet {
     margin-bottom: 72px;
+    line-height: 1;
   }
 }
 
@@ -30,8 +31,9 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250, 1fr));
-    gap: 60px;
+    gap: 90px 60px;
     counter-reset: step-counter;
+    line-height: 1.5;
   }
 
   @include desktop {
@@ -74,6 +76,7 @@
       font-family: var(--font-title, inherit);
       font-size: 280px;
       line-height: 0.72;
+      min-width: 136px;
       color: var(--color-secondary, #fafafa);
       top: 0;
       right: 0;

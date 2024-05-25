@@ -35,10 +35,11 @@
     width: auto;
     top: 0;
     left: auto;
-    margin-inline-end: -16.5px;
+    margin-inline-end: -10px;
   }
 
   @include desktop {
+    margin-inline-end: -16px;
     background-color: transparent;
     color: currentColor;
   }
@@ -61,14 +62,16 @@
   }
 
   &--nojs {
-    --hero-margin-x: -20px;
-    margin-inline: var(--hero-margin-x, inherit);
-    width: calc(100% - var(--hero-margin-x, inherit) * 2);
-    position: relative;
-    top: 15px;
-    opacity: 1;
-    transform: none;
-    z-index: 2;
+    @include mobile {
+      --hero-margin-x: -20px;
+      margin-inline: var(--hero-margin-x, inherit);
+      width: calc(100% - var(--hero-margin-x, inherit) * 2);
+      position: relative;
+      top: 15px;
+      opacity: 1;
+      transform: none;
+      z-index: 2;
+    }
   }
 }
 
@@ -106,7 +109,8 @@
       color: rgba(var(--color-dark-rgb, #999999), 0.3);
     }
 
-    &:hover::after {
+    &:hover::after,
+    &:focus-visible::after {
       width: calc(100% - 33px);
     }
 

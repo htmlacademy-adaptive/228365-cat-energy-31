@@ -1,23 +1,18 @@
 .additional-products {
   padding-block: 10px 20px;
-  background-image: linear-gradient(var(--color-accent, inherit) 100%, transparent);
-  background-repeat: no-repeat;
-  background-position: 0 20px;
-  background-size: 100% 2px;
 
   @include tablet {
     padding-block: 0 80px;
-    background-position: 0 14px;
   }
 
   @include desktop {
-    background-position: 0 18px;
+    padding-block: 0 96px;
   }
 }
 
 .additional-products__container {
   display: grid;
-  gap: 35px;
+  gap: 36px;
 
   @include tablet {
     @include fluid-gap-tab(70, 80);
@@ -29,9 +24,22 @@
 }
 
 .additional-products__title {
-  width: max-content;
-  box-shadow: -40px 0 0 0 var(--color-light,), 40px 0 0 0 var(--color-light,);
-  background-color: var(--color-light,);
+  max-width: fit-content;
+  position: relative;
+  box-shadow: -40px 0 0 0 var(--color-light,);
+  background-color: var(--color-light, #ffffff);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.45em;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background: var(--color-accent, #68b738);
+    box-shadow: calc(100vw + 40px) 0 0 0 var(--color-accent, #68b738);
+    z-index: -1;
+  }
 
   @include mobile {
     @include fluid-text-mob(24, 32);

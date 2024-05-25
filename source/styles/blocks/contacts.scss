@@ -38,7 +38,7 @@
   @include tablet {
     grid-template-columns: min-content 1fr;
     padding-block: 60px;
-    padding-inline: 70px;
+    padding-inline: 40px;
     gap: 87px;
   }
 
@@ -46,7 +46,9 @@
     pointer-events: visible;
     background-color: var(--color-light, inherit);
     padding-inline: 80px;
+    margin-block-start: -10px;
     max-width: 565px;
+    gap: 96px;
   }
 }
 
@@ -75,6 +77,11 @@
     line-height: 1.25;
     max-width: 200px;
     margin-left: auto;
+  }
+
+  @include desktop {
+    text-align: left;
+    align-items: flex-start;
   }
 }
 

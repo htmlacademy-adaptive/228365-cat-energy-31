@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Убираю скрол-бар на время разработки:) */
-::-webkit-scrollbar {
-  width: 0;
-}
-
-::-moz-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 /* Убираю внутренние отступы слева и стандартный маркер, у которых есть атрибут с классом list */
 :where(ul, ol):where([class*="list"]) {
   padding-left: 0;

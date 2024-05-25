@@ -9,6 +9,8 @@
   background-image:
     linear-gradient(rgba(104, 183, 56, 0.85) 100%, #68b738),
     image-set(
+      "../images/backgrounds/banner-bg-normal@1x.webp" 1x,
+      "../images/backgrounds/banner-bg-normal@2x.webp" 2x,
       "../images/backgrounds/banner-bg-normal@1x.jpg" 1x,
       "../images/backgrounds/banner-bg-normal@2x.jpg" 2x
     );
@@ -18,7 +20,7 @@
 
 
   @include tablet {
-    padding: 63px 88px 73px;
+    padding: 70px 88px;
     min-height: 200px;
     max-width: 708px;
     width: 100%;
@@ -26,18 +28,22 @@
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85) 100%, #68b738),
       image-set(
+        "../images/backgrounds/banner-bg-wide@1x.webp" 1x,
+        "../images/backgrounds/banner-bg-wide@2x.webp" 2x,
         "../images/backgrounds/banner-bg-wide@1x.jpg" 1x,
         "../images/backgrounds/banner-bg-wide@2x.jpg" 2x
       );
   }
 
   @include desktop {
-    padding: 63px 40px 45px;
+    padding: 63px 40px 40px;
     grid-row: 2;
     grid-column: 2 / 3;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85) 100%, #68b738),
       image-set(
+        "../images/backgrounds/banner-bg-normal@1x.webp" 1x,
+        "../images/backgrounds/banner-bg-normal@2x.webp" 2x,
         "../images/backgrounds/banner-bg-normal@1x.jpg" 1x,
         "../images/backgrounds/banner-bg-normal@2x.jpg" 2x
       );
@@ -49,7 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 61px;
   max-width: 164px;
   font-size: 16px;
   line-height: 1.25;
@@ -66,14 +72,24 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+
+    @include tablet {
+      width: 59px;
+      margin-block-start: -8px;
+    }
+
+    @include desktop {
+      width: 59px;
+      margin-block-start: 0;
+    }
   }
 
   @include tablet {
     flex-direction: row;
     text-align: start;
     max-width: none;
-    width: 494px;
-    column-gap: 275px;
+    width: 499px;
+    column-gap: 276px;
   }
 
   @include desktop {

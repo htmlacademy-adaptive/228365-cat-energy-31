@@ -3,7 +3,7 @@
   padding-block: 25px 40px;
 
   @include tablet {
-    padding-block: 45px 101px;
+    padding-block: 47px 101px;
     background-color: var(--color-light, inherit);
     box-shadow: inset 0 1px 0 0 var(--color-secondary-medium, inherit), inset 0 -462px 0 0 var(--color-secondary-medium, inherit);
   }
@@ -32,6 +32,7 @@
 
   @include tablet {
     margin-bottom: 60px;
+    line-height: 1;
   }
 
   @include desktop {
@@ -45,6 +46,7 @@
 
   @include tablet {
     margin-bottom: 55px;
+    line-height: 1.5;
   }
 
   @include desktop {
@@ -62,12 +64,12 @@
   @include tablet {
     grid-template-columns: minmax(162px, auto) minmax(162px, auto) 1fr;
     gap: 20px 43px;
-    margin-bottom: 99px;
+    margin-bottom: 93px;
   }
 
   @include desktop {
     grid-template-columns: 162px 162px;
-    gap: 55px 43px;
+    gap: 51px 43px;
     margin-bottom: -10px;
   }
 }
@@ -91,7 +93,8 @@
       align-items: flex-end;
       grid-column: 3 / -1;
       grid-row: 1;
-      margin-block-end: 17px;
+      row-gap: 9px;
+      margin-block-end: 10px;
     }
 
     @include desktop {
@@ -107,13 +110,9 @@
 
 .live-example__term {
   @include fluid-text-mob(14, 20);
-  line-height: 1.42;
+  line-height: 1;
   text-transform: uppercase;
   color: var(--color-dark, inherit);
-
-  @include tablet {
-    line-height: 1;
-  }
 
   &.title {
     padding-block: 15px 17px;
