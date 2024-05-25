@@ -1,1 +1,61 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+/* Нормализация блочной модели */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираю внутренние отступы слева и стандартный маркер, у которых есть атрибут с классом list */
+:where(ul, ol):where([class*="list"]) {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* Убираю внешний отступ слева, у которых есть атрибут с классом */
+:where(dd):where([class]) {
+  margin-inline-start: 0;
+}
+
+/* Убираю внешние отступы у которых есть атрибут class */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+/* Наследую свойства шрифта для полей ввода */
+:where(input,
+textarea,
+select):where([class]) {
+  font-family: inherit;
+}
+
+/* Делаю изображения адаптивными */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+:where(a[class]) {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-basic, inherit);
+  font-weight: 400;
+
+  @include fluid-text-mob(14, 16);
+  line-height: 1.29;
+  color: var(--color-dark-400, inherit);
+  background-color: var(--color-light, inherit);
+}

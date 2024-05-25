@@ -1,0 +1,39 @@
+.logo {
+  display: flex;
+  column-gap: 13px;
+  transition: opacity 0.3s;
+  line-height: 0;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.logo__icon {
+  @include tablet {
+    @include fluid-width-tab (60, 70);
+  }
+}
+
+.logo__title {
+  &--small {
+    display: block;
+    margin-inline: auto;
+
+    @include tablet {
+      margin-inline: 0;
+
+      @include fluid-width-tab (101, 118);
+    }
+  }
+
+  &--large {
+    //
+  }
+}

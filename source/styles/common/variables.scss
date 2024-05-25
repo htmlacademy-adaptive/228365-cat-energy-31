@@ -1,1 +1,31 @@
-/* здесь используйте глобальные переменные */
+:root {
+  --font-basic: "Lato", system-ui, "Arial", sans-serif;
+  --font-title: "Oswald", system-ui, "Arial", sans-serif;
+
+  --color-light: #ffffff;
+  --color-light-rgb: 255, 255, 255;
+  --color-dark: #000000;
+  --color-dark-rgb: 0, 0, 0;
+  --color-dark-100: #111111;
+  --color-dark-200: #222222;
+  --color-dark-400: #444444;
+  --color-dark-600: #666666;
+  --color-secondary: #f2f2f2;
+  --color-secondary-light: #ebebeb;
+  --color-secondary-medium: #e7e7e7;
+  --color-secondary-semidark: #d9d9d9;
+  --color-secondary-dark: #cdcdcd;
+  --color-accent: #68b738;
+  --color-accent-light: #9ecc82;
+  --color-accent-semidark: #5eaa2f;
+  --color-complementary-medium: #414045;
+  --color-alert: #ff8282;
+  --color-alert-light: #ffeeee;
+
+  --container-width: 1220px;
+  --container-padding-x: 20px;
+
+  @include tablet {
+    --container-padding-x: 30px;
+  }
+}

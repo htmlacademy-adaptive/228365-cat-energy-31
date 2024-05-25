@@ -1,5 +1,40 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  padding-block: 13px 14px;
+  background-color: var(--color-light, inherit);
+
+  @include desktop {
+    padding-block: 46px 0;
+    background-color: transparent;
+  }
+
+  &--inner {
+    box-shadow: 0 1px 0 0 var(--color-secondary-semidark, inherit);
+
+    @include tablet {
+      box-shadow: none;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 13px;
+
+  &:has(.navigation__list--nojs) {
+    flex-wrap: wrap;
+  }
+}
+
+.header__logo {
+  @include mobile {
+    flex-grow: 1;
+  }
+}
+
+.header__navigation {
+  &:has(.navigation__list--nojs) {
+    display: contents;
+  }
 }

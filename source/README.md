@@ -112,6 +112,7 @@
   - `npm run lint:html` - проверяет разметку по правилам linthtml
   - `npm run lint:bem` - проверяет правильное использование БЭМ в разметке
   - `npm run lint:styles` - проверяет проект на совместимость с stylelint
+  - `npm run lint:styles -- --fix` - автоисправление простых ошибок в коде
   - `npm run lint:scripts` - проверяет скрипты по правилам eslint
 - `npm run optimize` - запускает все оптимизации изображений (занимает длительное время):
   - `npm run optimize:raster` - оптимизирует растровые изображения из `raw/images/` в `source/images/`

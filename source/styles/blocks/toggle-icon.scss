@@ -1,0 +1,33 @@
+.toggle-icon {
+  width: 33px;
+  height: 38px;
+  position: relative;
+  padding: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    --line-height: 2px;
+    height: var(--line-height);
+    width: 70%;
+    top: calc(50% - var(--line-height) / 2);
+    right: 0;
+    background-color: #000000;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:not(.open)::before,
+  &:not(.open)::after {
+    transition: transform 0s;
+    box-shadow: 0 -8px, 0 8px;
+  }
+
+  &.open::before {
+    transform: rotate(45deg);
+  }
+
+  &.open::after {
+    transform: rotate(-45deg);
+  }
+}
