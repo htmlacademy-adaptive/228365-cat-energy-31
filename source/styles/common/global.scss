@@ -49,6 +49,18 @@ img {
   color: inherit;
 }
 
+/* Делаю кастомное выделение текста и убираю выделение у изображений */
+::selection {
+  background: var(--color-accent-semidark, inherit);
+  color: var(--color-light, inherit);
+  text-shadow: none;
+}
+
+img::selection,
+svg::selection {
+  background: transparent;
+}
+
 body {
   margin: 0;
   font-family: var(--font-basic, inherit);

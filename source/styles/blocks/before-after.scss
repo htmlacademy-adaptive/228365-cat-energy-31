@@ -8,6 +8,10 @@
   position: relative;
   max-width: 560px;
   height: auto;
+
+  @include desktop {
+    align-self: end;
+  }
 }
 
 .before-after picture {
