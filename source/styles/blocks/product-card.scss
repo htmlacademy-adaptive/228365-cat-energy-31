@@ -196,6 +196,7 @@
 }
 
 .product-card__list {
+  margin-block: 0;
   grid-row: 2 / 3;
   grid-column: 2 / -1;
 
@@ -249,6 +250,8 @@
 }
 
 .product-card__definition {
+  margin-inline-start: 0;
+
   @include tablet {
     line-height: 1.25;
   }
@@ -263,7 +266,7 @@
 .product-card__subtitle {
   @include fluid-text-mob(12, 16);
   // line-height: 1.33;
-  margin-block-end: 4px;
+  margin-block: 0 4px;
 }
 
 .product-card__button {

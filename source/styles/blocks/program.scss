@@ -4,7 +4,7 @@
   gap: 22px 20px;
   padding-block: 24px 18px;
   padding-inline: 20px;
-  background-color: var(--color-secondary-light, inherit);
+  background-color: var(--color-secondary, inherit);
 
   &::before {
     content: "";
@@ -103,10 +103,10 @@
 }
 
 .program__description {
+  margin-block: 0 16px;
   padding-bottom: 23px;
   grid-column: 1 / -1;
   box-shadow: 0 1px 0 0 var(--color-secondary-semidark, inherit);
-  margin-block-end: 16px;
 
   @include tablet {
     padding-block-end: 8px;

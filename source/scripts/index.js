@@ -1,4 +1,4 @@
-/* в этот файл добавляет скрипты */
+/* Выподающее меню */
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.navigation__toggle');
   const menuList = document.querySelector('.navigation__list');
