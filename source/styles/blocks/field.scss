@@ -1,6 +1,6 @@
 .field {
   padding: 13px;
-  font-family: var(--font-title,);
+  font-family: var(--font-title, inherit);
   font-size: 20px;
   text-transform: uppercase;
   border: 1px solid var(--color-secondary-medium, #e7e7e7);
