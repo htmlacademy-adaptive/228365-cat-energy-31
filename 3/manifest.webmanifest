@@ -1,0 +1,45 @@
+{
+  "name": "Cat Energy",
+  "short_name": "CAT",
+  "description": "Функциональное питание для котов",
+  "categories": [
+    "pets",
+    "health_and_wellness"
+  ],
+  "lang": "ru",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/",
+  "theme_color": "#eeeeee",
+  "background_color": "#111111",
+  "display": "standalone",
+  "orientation": "natural",
+  "icons": [
+    {
+      "src": "favicons/144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/maskable-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
